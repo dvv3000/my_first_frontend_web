@@ -1,0 +1,121 @@
+/* --------------02/02/2021------------ */
+/* -----------DEFAULT SETTING---------- */
+/* ------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px; 
+    /* font size mặc định là 16px */
+    color: #5a5a5a;
+    background-color: #ffffff;
+    text-rendering: optimizeLegibility;
+}
+
+/* ------------------------------------- */
+/* --------REUSABLE COMPONENTS---------- */
+/* ------------------------------------- */
+.btn{
+    text-decoration: none;
+    color:white;
+    background-color: #e67e22;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 5px;
+    /* Do the <a></a> mac dinh la display: inline */
+    display: inline-block;
+    /* Keo 2 button cho bang nhau */
+    width: 200px; 
+    /* Can giua cho chu */
+    text-align: center;
+    transition: all 0.3s;
+}
+/* Tạo nét gạch chân cho link khi di chuột đến */
+.btn:hover,
+.btn:active{
+    background-color: #d35400;
+}
+
+.clearfix::after{
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 300%;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    line-height: 135%;
+    margin-bottom: 50px;
+}
+
+/* ------------------------------------- */
+/* --------------Header----------------- */
+/* ------------------------------------- */
+
+header{
+    background-image: linear-gradient(135deg, rgba(43, 122, 120, 0.9) 55%, rgba(58, 175, 69, 0.9)), url(../img/background4.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    margin-top: 10px;
+}
+
+.logo{
+    width: 350px;
+    float: left;
+    margin-left: 90px;
+    margin-top: -50px;
+}
+
+.main-nav{
+    float: right;
+    list-style: none;
+    margin-right: 70px;
+    margin-top: 55px;
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.main-nav li a{
+    text-decoration: none;
+    color: white;
+    font-size: 110%;
+    font-weight: 700;
+    transition: border-bottom 0.5s;
+    padding: 5px;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid;
+}
+
+.heading-main-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-45%, -45%);
+    width: 1140px;
+}
+
+/* ------------------------------------- */
+/* --------ABOUT SECTIONS---------- */
+/* ------------------------------------- */
+
