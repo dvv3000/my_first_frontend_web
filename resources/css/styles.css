@@ -51,14 +51,51 @@ html{
     margin: 0 auto;
 }
 
-h1{
+h1, h2{
     text-transform: uppercase;
+    letter-spacing: 1px;
+}
+h1{
     font-size: 300%;
     font-weight: 400;
-    letter-spacing: 1px;
     color: white;
     line-height: 135%;
     margin-bottom: 50px;
+}
+
+h2{
+    color: tomato;
+    font-size: 180%;
+    font-weight: 700;
+    text-align: center;
+    margin: 50px;
+    padding: 30px;
+}
+
+h2::after{
+    content: " ";
+    display: block;
+    width: 150px;
+    height: 2px;
+    background-color: rgba(255, 99, 71, 0.7);
+    margin: 0 auto;
+    margin-top: 2px;
+}
+
+.p-long{
+    text-align: center;
+    color: rgb(23, 37, 42);
+    font-size: 22px;
+    margin: 40px 15% 90px 15%;
+    width: 70%;
+    line-height: 140%;
+}
+
+figcaption{
+    text-align: center;
+    color: rgb(43, 122, 120);
+    font-weight: 900;
+    cursor: pointer;
 }
 
 /* ------------------------------------- */
@@ -71,7 +108,7 @@ header{
     background-position: center;
     height: 100vh;
     background-attachment: fixed;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .logo{
@@ -119,3 +156,190 @@ header{
 /* --------ABOUT SECTIONS---------- */
 /* ------------------------------------- */
 
+.about-picture{ 
+    position: relative;
+}
+
+.about-picture img{
+    width: 90%;
+    border-radius: 25px;
+    border: 4px solid rgb(105, 205, 197); 
+    box-shadow: 0px 5px 15px 5px rgb(77, 148, 144);
+    cursor: pointer;
+    /* x - y là độ mờ - độ phóng rộng bóng */
+}
+
+.about-picture img:hover,
+.about-picture img:active{
+    transform: scale(1.1);
+}
+.picture-title{
+    position: absolute;
+    left: 50%;
+    color: rgb(36, 97, 96);
+    transform: translate(-60%, 0);
+    cursor: pointer;
+}
+
+
+/* ------------------------------------- */
+/* --------TESTIMONIALS SECTIONS---------- */
+/* ------------------------------------- */
+
+.testimonials-section{
+    background-image: linear-gradient(135deg, rgba(43, 122, 120, 0.9) 55%, rgba(58, 175, 69, 0.9)), url(/resources/img/background2.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    background-attachment: fixed;
+}
+
+.testimonials-section h2{
+    margin-bottom: 10px;
+}
+
+blockquote::before{
+    content: "\201C";
+    display: block;
+    font-size: 400%;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+}
+
+blockquote{
+    width: 95%;
+    position: relative;
+    font-style: italic;
+    line-height: 130%;
+    color: rgb(254, 255, 255);
+}
+
+cite{
+    color: rgb(58, 175, 69);
+    vertical-align: middle;
+}
+
+cite img{
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(60, 161, 153);
+    margin-top: 15px;
+}
+
+/* ------------------------------------- */
+/* --------SPONSORS SECTIONS---------- */
+/* ------------------------------------- */
+
+.sponsor-picture img{
+    height: 170px;
+    margin: 20px;
+    padding-left: 78px;
+}
+
+.sponsor-picture{
+    position: relative;
+    cursor: pointer;
+}
+
+.sponsor-picture:hover,
+.sponsor-picture:active{
+    transform: scale(1.2);
+}
+
+
+
+/* ------------------------------------- */
+/* --------CONTACT SECTION---------- */
+/* ------------------------------------- */
+.contact-section{
+    background-image: linear-gradient(135deg, rgba(43, 122, 120, 0.9) 55%, rgba(58, 175, 69, 0.9)), url(/resources/img/background5.jpeg);
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    background-attachment: fixed;
+    margin-top: 30px;
+}
+
+.information{
+    list-style: none;
+    line-height: 200%;
+    color: rgb(254, 255, 255);
+    margin-top: 70px;
+    font-size: 90%;
+}
+
+.fas{
+    font-size: 130%;
+    margin-right: 10px;
+}
+.fas:hover,
+.fas:active{
+    transform: scale(1.2);
+}
+
+.fab{
+    font-size: 250%;
+    margin-top: 20px;
+    color: rgb(254, 255, 255);
+}
+.fab:hover,
+.fab:active{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+form{
+    background-color: rgba(23, 37, 42, 0.4);
+    width: 70%;
+    margin-top: 30px;
+    margin-left: 25%;
+    padding: 30px;
+    padding-bottom: 20px;
+}
+
+form .row{
+    margin-bottom: 20px;
+}
+
+label{
+    font-size: 150%;
+    color: white;
+}
+
+input, textarea{
+    outline: none;
+    padding: 10px;
+    background-color: rgba(48, 47, 47, 0.3);
+    border: 1px solid rgba(70, 68, 68, 0.7);
+    margin-left: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+textarea{
+    resize: none;
+    height: 50px;
+    /* color:rgb(254, 255, 255); */
+}
+ 
+input{
+    height: 50px;
+}
+
+form .row:last-child{
+    text-align: center;
+    margin-top: 15px;
+}
+/* ------------------------------------- */
+/* --------FOOTER---------- */
+/* ------------------------------------- */
+
+footer p{
+    font-weight: 900;
+    text-align: center;
+    background-color: rgb(39, 77, 75);
+    padding: 15px;
+    /* margin-top: 20px; */
+    color: rgb(254, 255, 255);
+}
